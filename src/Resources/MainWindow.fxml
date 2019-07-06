@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+         minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE"
+         xmlns="http://javafx.com/javafx/8" fx:controller="UI.Controller">
+        <tabs>
+            <Tab text="Examinator">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <HBox alignment="center">
+                    <VBox>
+                    <TableView fx:id="tableViewExaminator" editable="true">
+                        <columns>
+                            <TableColumn fx:id="ExaminatorId" text="id">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="id" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="ExaminatorNume" text="nume">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="nume" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="ExaminatorCNP" text="cnp">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="cnp" />
+                                </cellValueFactory>
+                            </TableColumn>
+
+                        </columns>
+                    </TableView>
+                    <TextField fx:id="examinatorId" promptText="ID" />
+                    <TextField fx:id="examinatorNume" promptText="Nume" />
+                    <TextField fx:id="examinatorCnp" promptText="Cnp" />
+
+                    <TextField fx:id="searchNumeExaminator" promptText="Cauta Nume : " />
+                    <Button fx:id="AddExaminator" text="Add examinator" onAction="#AddExaminator" />
+                    <Button fx:id="Sortexaminator" text="Sort examinator" onAction="#SortExaminator" />
+                    <Button fx:id="SearchExaminator" text="Search examinator" onAction="#SearchExaminator" />
+                    <Button fx:id="RefreshExaminator" text="Refresh screen" onAction="#RefreshExaminator" />
+                    </VBox>
+                    </HBox>
+                </content>
+            </Tab>
+
+            <Tab text="Examinare">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    <HBox alignment="center">
+                        <VBox>
+                            <TableView fx:id="tableViewExaminare" editable="true">
+                                <columns>
+                                    <TableColumn fx:id="tableColumnId" text="id">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="id" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="tableColumnIdexam" text="Idexam">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="idexam" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="tableColumnRezultat" text="Rezultat">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="rezultat" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="ExaminareZiua" text="Ziua">
+                                        <cellValueFactory>
+                                            <PropertyValueFactory property="ziua" />
+                                        </cellValueFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                            <TextField fx:id="examinareId" promptText="ID" />
+                            <TextField fx:id="examinareIdexam" promptText="Idexam" />
+                            <TextField fx:id="examinareRezultat" promptText="Rezultat" />
+                            <TextField fx:id="examinareZiua" promptText="Ziua" />
+                            <TextField fx:id="searchExaminare" promptText="Cauta examinare : " />
+                            <Button fx:id="AddExaminare" text="Add examinare" onAction="#AddExaminare" />
+                            <Button fx:id="SortExaminare" text="Sort examinare" onAction="#SortExaminare" />
+                            <Button fx:id="SearchExaminare" text="Search examinare" onAction="#SearchExaminare" />
+                            <Button fx:id="RefreshExaminare" text="Refresh screen" onAction="#RefreshExaminare" />
+                        </VBox>
+                    </HBox>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
